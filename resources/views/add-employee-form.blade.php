@@ -47,7 +47,7 @@
                             class="bg-grey-700 border-1 rounded-xl w-full py-2 px-3 bg-gray-700 focus:outline-gray-300 outline-none text-white"
                             placeholder="Employee Phone" name="company">
                             <option class="text-gray-400" selected>Select Company</option>
-                            @foreach ($companies as $company)
+                            @foreach (App\Models\Company::all() as $company)
                                 <option value={{ $company->id }}>{{ $company->name }}</option>
                             @endforeach
                         </select>
